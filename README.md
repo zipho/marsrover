@@ -64,10 +64,10 @@ Requirements : Python3, conda
 
 Install:
 ```
-    git clone https://github.com/zipho/marsrover.git
-    cd marsrover
-    conda create --name <envname> --file requirements.txt 
-    conda activate <envname>
+git clone https://github.com/zipho/marsrover.git
+cd marsrover
+conda create --name <envname> --file requirements.txt 
+conda activate <envname>
 
 ```
 ## QuickStart:
