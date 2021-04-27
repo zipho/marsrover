@@ -68,7 +68,6 @@ git clone https://github.com/zipho/marsrover.git
 cd marsrover
 conda create --name <envname> --file requirements.txt 
 conda activate <envname>
-
 ```
 ## QuickStart:
 ```
