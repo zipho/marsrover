@@ -6,4 +6,3 @@ class Orientation(Enum):
     EAST = 'E'
     SOUTH = 'S'
     WEST = 'W'
-

@@ -1,4 +1,4 @@
-from marsrover.roverpoint import RoverPoint
+from marsrover.src.roverpoint import RoverPoint
 
 
 class Grid:

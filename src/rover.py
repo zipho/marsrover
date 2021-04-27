@@ -1,7 +1,7 @@
 from typing import List
 
-from marsrover.grid import Grid
-from marsrover.roverpoint import RoverPoint
+from marsrover.src.grid import Grid
+from marsrover.src.roverpoint import RoverPoint
 from marsrover.enums.movementcommand import MovementCommand
 
 from marsrover.enums.orientation import Orientation
@@ -27,7 +27,7 @@ class Rover:
 
     def __init__(self, grid: Grid, pos: RoverPoint):
         if not grid.is_position_within_grid_area(pos):
-            raise ValueError('Rover initial position out of grid area')
+            raise ValueError('rover initial position out of grid area')
         self.grid: Grid = grid
         self.active_position: RoverPoint = pos
 
@@ -75,7 +75,7 @@ class Rover:
                              self.active_position.y_axis + delta_points[orientation_index][1],
                              get_orientation_object(orientation_index))
 
-        #if not self.grid.is_position_within_grid_area(new_pos):
-        #    raise ValueError('rover cannot be driven out of grid area')
+        if not self.grid.is_position_within_grid_area(new_pos):
+            raise ValueError('rover cannot be driven out of grid area')
         self.active_position = new_pos
         return self.active_position
